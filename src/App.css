@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root{
+  font-size: 62.5%;
+--Grayish-Blue: hsl(217, 19%, 38%);
+--Dark-Grayish-Blue: hsl(217, 19%, 24%);
+--Dark-Blue: hsl(218, 23%, 16%);
+--Light-Cyan: hsl(193, 38%, 86%);
+--Neon-Green: hsl(150, 100%, 66%);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-size: 1.6rem;
+  background-color: var(--Dark-Blue);
+  min-height: 100vh;
+  font-family: 'Manrope', sans-serif;
+  display: grid;
+  margin-top: 7em;
+  cursor: pointer;
+}
+
+.overall-container{
+  width: min(95%, 500px);
+  background-color: var(--Dark-Grayish-Blue);
+  margin-inline: auto;
+  border-radius: 1rem;
+  text-align: center;
+  padding: 2em 1em 0em 1em;
+    display: grid;
+    place-items: center;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+  min-height: auto;
+}
+
+.overall-container > .btn{
+  z-index: 1;
+}
+
+.random-advice{
+  font-size: 2.8rem;
+  color: var(--Light-Cyan);
+}
+
+.individual-advice-id{
+  font-size: 1.2rem;
+  font-weight: 100;
+  letter-spacing: 2px;
+  color: var(--Neon-Green);
+  margin-bottom: 1.8em;
+
+}
+
+.img-container{
+margin-top: 1.5em;
+}
+
+.btn{
+  width: 65px;
+  height: 65px;
+  border-radius: 100%;
+  display: grid;
+  place-content: center;
+  position: relative;
+  top: 35px;
+  border: none;
+  background-color: var(--Neon-Green);
+}
+
+.btn:focus-visible,
+.btn:focus-within{
+  outline: none;
+}
+
+.btn::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--Neon-Green);
+  border-radius: 100%;
+    box-shadow: 0px 0px 4em 0.1em var(--Neon-Green);
+    opacity: 0;
+    transition: opacity 0.6s linear;
+}
+
+.diceicon{
+  z-index: 1;
+  position: relative;
+  cursor: pointer;
+}
+
+.btn:hover::after{
+  cursor: pointer;
+  opacity: 1;
+}
+
+
+
+@media (min-width: 40em){
+.img-container {
+    margin-top: 2.2em;
+  }
+
+    .overall-container {
+      padding: 2em 1em 0em 1em;
+    }
+
+  body {
+    place-content: center;
+      margin-top: 0em;
+  }
+
+    .btn {
+      width: 70px;
+      height: 70px;
+      border-radius: 100%;
+      display: grid;
+      place-content: center;
+      position: relative;
+      top: 35px;
+      border: none;
+      background-color: var(--Neon-Green);
+    }
+    
+}
